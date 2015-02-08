@@ -1,0 +1,197 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$desktop-width: 700px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+$font-stack: "proxima-nova",sans-serif;
+$primary-color: #efefef;
+$text-align:left;
+
+.launch a:link {color: #fefefe;
+    font-size: 1.125em;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px solid #fefefe;
+    }
+.launch a:visited {color:#fefefe;} 
+.launch a:hover {color:#fefefe;}   
+.launch a:active {color:#fefefe;}
+
+.nav a:link {color: #4e4e4e;
+    font-size: 0.750em;
+    font-weight: 600;
+    text-decoration: none;
+    padding-left: 12px;
+    }
+.nav a:visited {color:#4e4e4e;} 
+.nav a:hover {color:#4e4e4e;}   
+.nav a:active {color:#4e4e4e;}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  text-align: $text-align;
+  background-color: #ECF0F1;
+}
+.containerHeader {
+  padding: 38px 0 24px 0;
+  text-align: center;
+  margin: auto;
+   
+  @include desktop {
+    padding: 38px 0 38px 20%;
+    text-align: left;
+    display: inline-block;
+  }
+}
+.containerLinks {
+  padding: 0 0 38px 20%;
+  text-align: center;
+
+  @include desktop {
+    padding: 38px 0 38px 36%;
+    text-align: left;
+    display: inline-block;
+  }
+}
+.containerAbout {
+  padding: 38px 0 38px 20%;
+  text-align: left;
+  width: 60%;
+
+  @include desktop {
+    padding: 78px 0 78px 20%;
+  }
+}
+.containerTarget {
+  background-image: url("../images/projects/target.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center; 
+  box-shadow: 0px 500px rgba(0, 0, 0, 0.76) inset;
+  transition: 1s ease;
+  width: 100%;
+}
+.containerTarget:hover {
+  background-image: url("../images/projects/target.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center; 
+  box-shadow: 0px 500px rgba(0, 0, 0, 0.66) inset;
+  transition: 1s ease;
+  width: 100%;
+}
+.containerSkylanders {
+  background-image: url("../images/projects/skylanders.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center; 
+  box-shadow: 0px 500px rgba(0, 0, 0, 0.76) inset;
+  transition: 1s ease;
+  width: 100%;
+}
+.containerSkylanders:hover {
+  background-image: url("../images/projects/skylanders.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center; 
+  box-shadow: 0px 500px rgba(0, 0, 0, 0.66) inset;
+  transition: 1s ease;
+  width: 100%;
+}
+.containerInfo {
+  padding: 38px 0 38px 20%;
+  max-width: 740px;
+  text-align: left;
+  width: 60%;
+  @include desktop {
+    padding: 78px 0 78px 20%;
+  }
+}
+.header {
+  position: fixed;
+  border-bottom: 1px solid #BCBFC0;
+  width: 100%;
+  background-color: #ECF0F1;
+}
+.h1 {
+	font-size: 1.2em;
+	font-weight: 400; 
+  line-height: 1.4;
+  text-shadow: 0px 1px 6px rgba(0, 0, 0, .7);
+
+  @include desktop {
+    font-size: 2em;
+  }
+}
+.h1 span {
+ color: #4e4e4e;
+ text-shadow:none;
+}
+.h2 {
+  font-size: 1.425em;
+  font-weight: 600; 
+  color: #4e4e4e;
+}
+li.links {
+	font-size: 1em;
+	font-weight: 400; 
+	margin-bottom: 10px;
+
+	@include desktop {
+    font-size: 1.2em;
+    margin-bottom: 16px;
+  }
+}
+li.links:last-child {
+  margin-right: 0;
+}
+.linkwrapper {
+	
+	strong {
+		display: inline-block;
+		width: 4.8em;
+		padding: 0 .8em 0 0;
+		text-align: left;
+	}
+}
+.p{
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.7em;
+  padding-top: 12px;
+	padding-bottom: 48px;
+  text-shadow: 0px 1px 6px rgba(0, 0, 0, .7);
+
+  	@include desktop {
+    font-size: 1.125em;
+  }
+}
+.push {
+  padding-bottom:80px;
+}
+.sitewrapper {
+	margin: auto;
+}
